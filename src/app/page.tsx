@@ -33,7 +33,6 @@ export default function Home() {
             </h1>
           </div>
           <nav className="hidden md:flex items-center gap-8 font-headline text-lg">
-            <a href="#products" className="hover:text-primary transition-colors">Pasteles</a>
             <a href="#products" className="hover:text-primary transition-colors">Postres</a>
             <a href="#recommendations" className="hover:text-primary transition-colors">Recomendaciones</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contacto</a>
