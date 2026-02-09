@@ -24,10 +24,10 @@ const mainCakes = [
 ];
 
 const seasonalDesserts = [
-  { id: 'postre-11', price: '$15', rating: 4.9, reviews: 45 },
-  { id: 'postre-12', price: '$12', rating: 4.8, reviews: 32 },
-  { id: 'postre-13', price: '$18', rating: 4.7, reviews: 56 },
-  { id: 'postre-14', price: '$10', rating: 4.9, reviews: 28 },
+  { id: 'postre-1', price: '$15', rating: 4.9, reviews: 45 },
+  { id: 'postre-2', price: '$12', rating: 4.8, reviews: 32 },
+  { id: 'postre-3', price: '$18', rating: 4.7, reviews: 56 },
+  { id: 'postre-4', price: '$10', rating: 4.9, reviews: 28 },
 ];
 
 export default function Home() {

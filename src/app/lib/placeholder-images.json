@@ -62,27 +62,27 @@
       "imageHint": "chocolate dessert"
     },
     {
-      "id": "postre-11",
+      "id": "postre-1",
       "description": "Macarons Artesanales",
-      "imageUrl": "https://picsum.photos/seed/11/600/400",
+      "imageUrl": "/assets/POSTRE_1.jpeg",
       "imageHint": "macarons"
     },
     {
-      "id": "postre-12",
+      "id": "postre-2",
       "description": "Mini Cheesecakes",
-      "imageUrl": "https://picsum.photos/seed/12/600/400",
+      "imageUrl": "/assets/POSTRE_2.jpeg",
       "imageHint": "mini cheesecake"
     },
     {
-      "id": "postre-13",
+      "id": "postre-3",
       "description": "Cupcakes Gourmet",
-      "imageUrl": "https://picsum.photos/seed/13/600/400",
+      "imageUrl": "/assets/POSTRE_3.jpeg",
       "imageHint": "cupcakes"
     },
     {
-      "id": "postre-14",
+      "id": "postre-4",
       "description": "Brownies de Nuez",
-      "imageUrl": "https://picsum.photos/seed/14/600/400",
+      "imageUrl": "/assets/POSTRE_4.jpeg",
       "imageHint": "brownies"
     }
   ]
