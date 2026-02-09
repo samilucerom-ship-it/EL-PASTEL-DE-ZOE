@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
@@ -63,26 +62,26 @@ export default function Home() {
             src="/assets/Banner.png" 
             alt="Banner El Pastel de Zoe" 
             fill 
-            className="object-cover opacity-60 z-0"
+            className="object-cover opacity-80 z-0"
             priority
           />
           <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
             <div className="space-y-6 max-w-3xl">
-              <Badge variant="outline" className="text-secondary border-secondary px-4 py-1 uppercase tracking-widest text-xs">
+              <Badge variant="outline" className="text-secondary border-secondary px-4 py-1 uppercase tracking-widest text-xs bg-white/50 backdrop-blur-sm">
                 Hecho con Amor
               </Badge>
-              <h2 className="text-5xl md:text-7xl font-headline leading-tight">
+              <h2 className="text-5xl md:text-7xl font-headline leading-tight drop-shadow-sm">
                 Dulzura en cada bocado, <br />
-                <span className="text-primary italic">momentos inolvidables.</span>
+                <span className="text-secondary italic font-bold">momentos inolvidables.</span>
               </h2>
-              <p className="text-xl text-muted-foreground mx-auto">
+              <p className="text-xl text-foreground font-medium max-w-2xl mx-auto bg-white/20 backdrop-blur-[2px] rounded-lg p-2">
                 Descubre nuestra exquisita selección de pasteles artesanales diseñados para celebrar la vida.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg text-lg" asChild>
                   <a href="#products">Ver Catálogo</a>
                 </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-8 border-secondary text-secondary hover:bg-secondary/10 text-lg" asChild>
+                <Button size="lg" variant="outline" className="rounded-full px-8 border-secondary text-secondary-foreground hover:bg-secondary/10 text-lg bg-white/80" asChild>
                   <a href="#recommendations">Encuentra tu Pastel</a>
                 </Button>
               </div>
