@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
@@ -9,22 +10,21 @@ import { RecommendationTool } from '@/components/RecommendationTool';
 const WHATSAPP_NUMBER = "928175368";
 const SOCIAL_HANDLE = "EL_PASTEL_DE_ZOE";
 
+// Mapping the 10 winner products
 const cakes = [
-  { id: 'chocolate-cake', price: '$45', rating: 4.9, reviews: 124 },
-  { id: 'red-velvet', price: '$48', rating: 5.0, reviews: 89 },
-  { id: 'strawberry-shortcake', price: '$42', rating: 4.8, reviews: 156 },
-  { id: 'vanilla-bean', price: '$38', rating: 4.7, reviews: 92 },
-  { id: 'lemon-zest', price: '$40', rating: 4.9, reviews: 74 },
-  { id: 'carrot-cake', price: '$44', rating: 4.8, reviews: 63 },
-  { id: 'tiramisu', price: '$52', rating: 5.0, reviews: 45 },
-  { id: 'tres-leches', price: '$46', rating: 4.9, reviews: 112 },
-  { id: 'cheesecake', price: '$50', rating: 4.7, reviews: 88 },
+  { id: 'pastel-1', price: '$45', rating: 4.9, reviews: 124 },
+  { id: 'pastel-2', price: '$48', rating: 5.0, reviews: 89 },
+  { id: 'pastel-3', price: '$42', rating: 4.8, reviews: 156 },
+  { id: 'pastel-4', price: '$38', rating: 4.7, reviews: 92 },
+  { id: 'pastel-5', price: '$40', rating: 4.9, reviews: 74 },
+  { id: 'pastel-6', price: '$44', rating: 4.8, reviews: 63 },
+  { id: 'pastel-7', price: '$52', rating: 5.0, reviews: 45 },
 ];
 
 const seasonalDesserts = [
-  { id: 'brownie-supreme', price: '$25', rating: 4.9, reviews: 56 },
-  { id: 'macarons', price: '$18', rating: 4.8, reviews: 42 },
-  { id: 'pavlova', price: '$35', rating: 5.0, reviews: 29 },
+  { id: 'pastel-8', price: '$46', rating: 4.9, reviews: 112 },
+  { id: 'pastel-9', price: '$50', rating: 4.7, reviews: 88 },
+  { id: 'pastel-10', price: '$35', rating: 5.0, reviews: 95 },
 ];
 
 export default function Home() {
@@ -156,7 +156,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seasonal Section - New Section */}
+        {/* Seasonal Section */}
         <section id="seasonal" className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 space-y-4">

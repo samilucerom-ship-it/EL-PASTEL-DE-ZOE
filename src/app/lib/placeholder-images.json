@@ -2,76 +2,64 @@
 {
   "placeholderImages": [
     {
-      "id": "chocolate-cake",
-      "description": "Chocolate Fudge Cake",
-      "imageUrl": "https://picsum.photos/seed/cake1/600/400",
+      "id": "pastel-1",
+      "description": "Chocolate Fudge Premium",
+      "imageUrl": "/assets/PASATELES/PASTELES_1.jpeg",
       "imageHint": "chocolate cake"
     },
     {
-      "id": "red-velvet",
+      "id": "pastel-2",
       "description": "Red Velvet Dream",
-      "imageUrl": "https://picsum.photos/seed/cake2/600/400",
+      "imageUrl": "/assets/PASATELES/PASTELES_2.jpeg",
       "imageHint": "red velvet cake"
     },
     {
-      "id": "strawberry-shortcake",
+      "id": "pastel-3",
       "description": "Strawberry Shortcake",
-      "imageUrl": "https://picsum.photos/seed/cake3/600/400",
+      "imageUrl": "/assets/PASATELES/PASTELES_3.jpeg",
       "imageHint": "strawberry cake"
     },
     {
-      "id": "vanilla-bean",
+      "id": "pastel-4",
       "description": "Vanilla Bean Classic",
-      "imageUrl": "https://picsum.photos/seed/cake4/600/400",
+      "imageUrl": "/assets/PASATELES/PASTELES_4.jpeg",
       "imageHint": "vanilla cake"
     },
     {
-      "id": "lemon-zest",
+      "id": "pastel-5",
       "description": "Lemon Zest Delight",
-      "imageUrl": "https://picsum.photos/seed/cake5/600/400",
+      "imageUrl": "/assets/PASATELES/PASTELES_5.jpeg",
       "imageHint": "lemon cake"
     },
     {
-      "id": "carrot-cake",
+      "id": "pastel-6",
       "description": "Carrot Cake Supreme",
-      "imageUrl": "https://picsum.photos/seed/cake6/600/400",
+      "imageUrl": "/assets/PASATELES/PASTELES_6.jpeg",
       "imageHint": "carrot cake"
     },
     {
-      "id": "tiramisu",
-      "description": "Tiramisu Layer Cake",
-      "imageUrl": "https://picsum.photos/seed/cake7/600/400",
-      "imageHint": "tiramisu cake"
+      "id": "pastel-7",
+      "description": "Tiramisu Especial",
+      "imageUrl": "/assets/PASATELES/PASTELES_7.jpeg",
+      "imageHint": "tiramisu"
     },
     {
-      "id": "tres-leches",
-      "description": "Tres Leches Especial",
-      "imageUrl": "https://picsum.photos/seed/cake8/600/400",
+      "id": "pastel-8",
+      "description": "Tres Leches Gourmet",
+      "imageUrl": "/assets/PASATELES/PASTELES_8.jpeg",
       "imageHint": "tres leches"
     },
     {
-      "id": "cheesecake",
-      "description": "Cheesecake Raspberry Swirl",
-      "imageUrl": "https://picsum.photos/seed/cake9/600/400",
-      "imageHint": "raspberry cheesecake"
+      "id": "pastel-9",
+      "description": "Cheesecake de la Casa",
+      "imageUrl": "/assets/PASATELES/PASTELES_9.jpeg",
+      "imageHint": "cheesecake"
     },
     {
-      "id": "brownie-supreme",
-      "description": "Brownie Supremo",
-      "imageUrl": "https://picsum.photos/seed/brownie/600/400",
-      "imageHint": "chocolate brownie"
-    },
-    {
-      "id": "macarons",
-      "description": "Pack de Macarons",
-      "imageUrl": "https://picsum.photos/seed/macarons/600/400",
-      "imageHint": "macarons"
-    },
-    {
-      "id": "pavlova",
-      "description": "Pavlova de Frutas",
-      "imageUrl": "https://picsum.photos/seed/pavlova/600/400",
-      "imageHint": "pavlova dessert"
+      "id": "pastel-10",
+      "description": "Tentación de Chocolate",
+      "imageUrl": "/assets/PASATELES/PASTELES_10.jpeg",
+      "imageHint": "chocolate dessert"
     }
   ]
 }
