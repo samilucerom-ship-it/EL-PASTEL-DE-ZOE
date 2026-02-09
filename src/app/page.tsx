@@ -50,16 +50,7 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-center overflow-hidden bg-primary/10">
-          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-            <Image 
-              src="https://picsum.photos/seed/bg/1920/1080" 
-              alt="Bakery background" 
-              fill 
-              className="object-cover" 
-              priority 
-            />
-          </div>
+        <section className="relative h-[80vh] flex items-center overflow-hidden bg-primary/10">
           <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
             <div className="space-y-6 max-w-3xl">
               <Badge variant="outline" className="text-secondary border-secondary px-4 py-1 uppercase tracking-widest text-xs">
