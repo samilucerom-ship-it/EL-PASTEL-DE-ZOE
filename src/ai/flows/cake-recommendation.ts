@@ -23,9 +23,14 @@ const CakeRecommendationInputSchema = z.object({
 });
 export type CakeRecommendationInput = z.infer<typeof CakeRecommendationInputSchema>;
 
+const RecommendedCakeSchema = z.object({
+  id: z.string().describe('The ID of the cake from the catalog (e.g., pastel-1).'),
+  recommendation: z.string().describe('The name of the cake.'),
+  description: z.string().describe('Why this cake is a great fit for the user.'),
+});
+
 const CakeRecommendationOutputSchema = z.object({
-  recommendation: z.string().describe('The recommended cake based on the user\'s preferences.'),
-  description: z.string().describe('A description of the recommended cake.'),
+  suggestions: z.array(RecommendedCakeSchema).describe('A list of up to 3 recommended cakes.'),
 });
 export type CakeRecommendationOutput = z.infer<typeof CakeRecommendationOutputSchema>;
 
@@ -39,25 +44,26 @@ const prompt = ai.definePrompt({
   output: {schema: CakeRecommendationOutputSchema},
   prompt: `You are an expert cake recommender for Zoe's Sweet Delights.
 
-  A customer is looking for a cake based on their preferences. Recommend ONE cake from Zoe's Sweet Delights catalog based on:
-
+  A customer is looking for recommendations based on:
   Dietary Restrictions: {{{dietaryRestrictions}}}
   Favorite Flavors: {{{favoriteFlavors}}}
   Occasion: {{{occasion}}}
 
-  Available Cakes at Zoe's Sweet Delights:
-  1. Chocolate Fudge Premium ($45): Rich chocolate layers with Belgian fudge.
-  2. Red Velvet Dream ($48): Classic red velvet with silky cream cheese frosting.
-  3. Strawberry Shortcake ($42): Light sponge cake with fresh strawberries and cream.
-  4. Vanilla Bean Classic ($38): Elegant vanilla bean cake with Madagascar vanilla frosting.
-  5. Lemon Zest Delight ($40): Refreshing lemon-infused cake with citrus glaze.
-  6. Carrot Cake Supreme ($44): Moist carrot cake with walnuts and spice.
-  7. Tiramisu Especial ($52): Coffee-soaked layers with mascarpone mousse.
-  8. Tres Leches Gourmet ($46): Traditional three-milk cake with a gourmet touch.
-  9. Cheesecake de la Casa ($50): Creamy New York style cheesecake with berry coulis.
-  10. Tentación de Chocolate ($35): Dark chocolate moist cake for true cocoa lovers.
+  Based on their preferences, suggest up to 3 cakes from our catalog. You MUST use the exact ID and name provided below.
 
-  Return a JSON object with the 'recommendation' (the name of the cake) and its 'description' (why it's perfect for them).
+  Catalog:
+  - id: pastel-1, name: Chocolate Fudge Premium, price: $45
+  - id: pastel-2, name: Red Velvet Dream, price: $48
+  - id: pastel-3, name: Strawberry Shortcake, price: $42
+  - id: pastel-4, name: Vanilla Bean Classic, price: $38
+  - id: pastel-5, name: Lemon Zest Delight, price: $40
+  - id: pastel-6, name: Carrot Cake Supreme, price: $44
+  - id: pastel-7, name: Tiramisu Especial, price: $52
+  - id: pastel-8, name: Tres Leches Gourmet, price: $46
+  - id: pastel-9, name: Cheesecake de la Casa, price: $50
+  - id: pastel-10, name: Tentación de Chocolate, price: $35
+
+  Return a JSON object with 'suggestions', each containing the 'id', 'recommendation' (name), and 'description'.
   `,
 });
 
