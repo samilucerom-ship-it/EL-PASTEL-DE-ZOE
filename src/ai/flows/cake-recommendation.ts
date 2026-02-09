@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -38,17 +39,25 @@ const prompt = ai.definePrompt({
   output: {schema: CakeRecommendationOutputSchema},
   prompt: `You are an expert cake recommender for Zoe's Sweet Delights.
 
-  A customer is looking for a cake based on their preferences.  Recommend one cake from Zoe's Sweet Delights based on the following criteria:
+  A customer is looking for a cake based on their preferences. Recommend ONE cake from Zoe's Sweet Delights catalog based on:
 
   Dietary Restrictions: {{{dietaryRestrictions}}}
   Favorite Flavors: {{{favoriteFlavors}}}
   Occasion: {{{occasion}}}
 
-  Consider the available cakes at Zoe's Sweet Delights. Here is a list of cakes that Zoe's Sweet Delights offers:
+  Available Cakes at Zoe's Sweet Delights:
+  1. Chocolate Fudge Premium ($45): Rich chocolate layers with Belgian fudge.
+  2. Red Velvet Dream ($48): Classic red velvet with silky cream cheese frosting.
+  3. Strawberry Shortcake ($42): Light sponge cake with fresh strawberries and cream.
+  4. Vanilla Bean Classic ($38): Elegant vanilla bean cake with Madagascar vanilla frosting.
+  5. Lemon Zest Delight ($40): Refreshing lemon-infused cake with citrus glaze.
+  6. Carrot Cake Supreme ($44): Moist carrot cake with walnuts and spice.
+  7. Tiramisu Especial ($52): Coffee-soaked layers with mascarpone mousse.
+  8. Tres Leches Gourmet ($46): Traditional three-milk cake with a gourmet touch.
+  9. Cheesecake de la Casa ($50): Creamy New York style cheesecake with berry coulis.
+  10. Tentación de Chocolate ($35): Dark chocolate moist cake for true cocoa lovers.
 
-  [Provide a comprehensive and detailed list of the 9+ cakes, including names, descriptions, prices, and ingredients.  This list MUST be comprehensive.]
-
-  Based on the criteria above, return a JSON object with the recommended cake and its description.
+  Return a JSON object with the 'recommendation' (the name of the cake) and its 'description' (why it's perfect for them).
   `,
 });
 
