@@ -97,7 +97,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
               <div className="space-y-4">
-                <h3 className="text-4xl font-headline">Nuestras Creaciones</h3>
+                <h3 className="text-4xl font-headline">Nuestras Creaciones de Pasteles</h3>
                 <p className="text-muted-foreground text-lg max-w-xl">
                   Cada pastel es una obra maestra única, elaborada con los mejores ingredientes y mucho cariño.
                 </p>
