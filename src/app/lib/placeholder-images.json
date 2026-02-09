@@ -1,0 +1,59 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "chocolate-cake",
+      "description": "Chocolate Fudge Cake",
+      "imageUrl": "https://picsum.photos/seed/cake1/600/400",
+      "imageHint": "chocolate cake"
+    },
+    {
+      "id": "red-velvet",
+      "description": "Red Velvet Dream",
+      "imageUrl": "https://picsum.photos/seed/cake2/600/400",
+      "imageHint": "red velvet cake"
+    },
+    {
+      "id": "strawberry-shortcake",
+      "description": "Strawberry Shortcake",
+      "imageUrl": "https://picsum.photos/seed/cake3/600/400",
+      "imageHint": "strawberry cake"
+    },
+    {
+      "id": "vanilla-bean",
+      "description": "Vanilla Bean Classic",
+      "imageUrl": "https://picsum.photos/seed/cake4/600/400",
+      "imageHint": "vanilla cake"
+    },
+    {
+      "id": "lemon-zest",
+      "description": "Lemon Zest Delight",
+      "imageUrl": "https://picsum.photos/seed/cake5/600/400",
+      "imageHint": "lemon cake"
+    },
+    {
+      "id": "carrot-cake",
+      "description": "Carrot Cake Supreme",
+      "imageUrl": "https://picsum.photos/seed/cake6/600/400",
+      "imageHint": "carrot cake"
+    },
+    {
+      "id": "tiramisu",
+      "description": "Tiramisu Layer Cake",
+      "imageUrl": "https://picsum.photos/seed/cake7/600/400",
+      "imageHint": "tiramisu cake"
+    },
+    {
+      "id": "tres-leches",
+      "description": "Tres Leches Especial",
+      "imageUrl": "https://picsum.photos/seed/cake8/600/400",
+      "imageHint": "tres leches"
+    },
+    {
+      "id": "cheesecake",
+      "description": "Cheesecake Raspberry Swirl",
+      "imageUrl": "https://picsum.photos/seed/cake9/600/400",
+      "imageHint": "raspberry cheesecake"
+    }
+  ]
+}
