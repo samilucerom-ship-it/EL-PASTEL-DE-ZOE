@@ -59,7 +59,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative h-[80vh] flex items-center overflow-hidden bg-black">
           <Image 
-            src="/assets/Banner.png" 
+            src="/assets/PASATELES/PASTEL_9.jpeg" 
             alt="Banner El Pastel de Zoe" 
             fill 
             className="object-cover opacity-70 z-0"
