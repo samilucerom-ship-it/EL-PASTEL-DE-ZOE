@@ -52,7 +52,7 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative h-[60vh] md:h-[80vh] flex items-center overflow-hidden bg-black">
+        <section className="relative h-[75vh] md:h-[90vh] flex items-center overflow-hidden bg-black">
           <Image 
             src="/assets/Banner.png" 
             alt="Banner El Pastel de Zoe" 
