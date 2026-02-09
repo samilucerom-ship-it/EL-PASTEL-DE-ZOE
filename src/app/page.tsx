@@ -57,31 +57,34 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative h-[80vh] flex items-center overflow-hidden bg-primary/10">
+        <section className="relative h-[80vh] flex items-center overflow-hidden bg-black">
           <Image 
             src="/assets/Banner.png" 
             alt="Banner El Pastel de Zoe" 
             fill 
-            className="object-cover opacity-80 z-0"
+            className="object-cover opacity-70 z-0"
             priority
           />
-          <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
+          {/* Dark Overlay Layer */}
+          <div className="absolute inset-0 bg-black/40 z-[1]" />
+          
+          <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center text-white">
             <div className="space-y-6 max-w-3xl">
-              <Badge variant="outline" className="text-secondary border-secondary px-4 py-1 uppercase tracking-widest text-xs bg-white/50 backdrop-blur-sm">
+              <Badge variant="outline" className="text-white border-white px-4 py-1 uppercase tracking-widest text-xs bg-black/30 backdrop-blur-sm">
                 Hecho con Amor
               </Badge>
-              <h2 className="text-5xl md:text-7xl font-headline leading-tight drop-shadow-sm">
+              <h2 className="text-5xl md:text-7xl font-headline leading-tight drop-shadow-xl text-white">
                 Dulzura en cada bocado, <br />
-                <span className="text-secondary italic font-bold">momentos inolvidables.</span>
+                <span className="text-primary italic font-bold">momentos inolvidables.</span>
               </h2>
-              <p className="text-xl text-foreground font-medium max-w-2xl mx-auto bg-white/20 backdrop-blur-[2px] rounded-lg p-2">
+              <p className="text-xl text-white font-medium max-w-2xl mx-auto bg-black/20 backdrop-blur-md rounded-lg p-4">
                 Descubre nuestra exquisita selección de pasteles artesanales diseñados para celebrar la vida.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg text-lg" asChild>
                   <a href="#products">Ver Catálogo</a>
                 </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-8 border-secondary text-secondary-foreground hover:bg-secondary/10 text-lg bg-white/80" asChild>
+                <Button size="lg" variant="outline" className="rounded-full px-8 border-white text-white hover:bg-white/10 text-lg bg-transparent" asChild>
                   <a href="#recommendations">Encuentra tu Pastel</a>
                 </Button>
               </div>
