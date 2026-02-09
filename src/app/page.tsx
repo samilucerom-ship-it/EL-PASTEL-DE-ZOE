@@ -63,7 +63,7 @@ export default function Home() {
             src="/assets/Banner.png" 
             alt="Banner El Pastel de Zoe" 
             fill 
-            className="object-cover opacity-40 z-0"
+            className="object-cover opacity-60 z-0"
             priority
           />
           <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
