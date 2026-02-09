@@ -59,13 +59,13 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative h-[80vh] flex items-center overflow-hidden bg-black">
           <Image 
-            src="/assets/PASATELES/PASTEL_1.jpeg" 
+            src="/assets/Banner.png" 
             alt="Banner El Pastel de Zoe" 
             fill 
             className="object-cover opacity-70 z-0"
             priority
           />
-          {/* Dark Overlay Layer */}
+          {/* Dark Overlay Layer for Contrast */}
           <div className="absolute inset-0 bg-black/40 z-[1]" />
           
           <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center text-white">
