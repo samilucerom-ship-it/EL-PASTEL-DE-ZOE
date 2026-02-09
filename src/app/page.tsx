@@ -109,7 +109,7 @@ export default function Home() {
                 const imageData = PlaceHolderImages.find(img => img.id === cake.id);
                 return (
                   <Card key={cake.id} className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white">
-                    <CardHeader className="p-0 relative h-72 overflow-hidden bg-muted/10">
+                    <CardHeader className="p-0 relative h-[500px] overflow-hidden bg-muted/10">
                       {imageData && (
                         <Image 
                           src={imageData.imageUrl} 
