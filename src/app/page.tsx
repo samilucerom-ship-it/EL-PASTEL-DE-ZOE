@@ -50,7 +50,7 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative h-[80vh] flex items-center overflow-hidden bg-primary/10">
+        <section className="relative h-[60vh] flex items-center overflow-hidden bg-primary/10">
           <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
             <Image 
               src="https://picsum.photos/seed/bg/1920/1080" 
@@ -60,8 +60,8 @@ export default function Home() {
               priority 
             />
           </div>
-          <div className="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+          <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
+            <div className="space-y-6 max-w-3xl">
               <Badge variant="outline" className="text-secondary border-secondary px-4 py-1 uppercase tracking-widest text-xs">
                 Hecho con Amor
               </Badge>
@@ -69,10 +69,10 @@ export default function Home() {
                 Dulzura en cada bocado, <br />
                 <span className="text-primary italic">momentos inolvidables.</span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-lg">
+              <p className="text-xl text-muted-foreground mx-auto">
                 Descubre nuestra exquisita selección de pasteles artesanales diseñados para celebrar la vida.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg text-lg" asChild>
                   <a href="#products">Ver Catálogo</a>
                 </Button>
@@ -80,15 +80,6 @@ export default function Home() {
                   <a href="#recommendations">Encuentra tu Pastel</a>
                 </Button>
               </div>
-            </div>
-            <div className="hidden md:block relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-              <Image 
-                src="https://picsum.photos/seed/hero/800/800" 
-                alt="Signature Cake" 
-                fill 
-                className="object-cover"
-                data-ai-hint="luxury cake"
-              />
             </div>
           </div>
         </section>
