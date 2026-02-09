@@ -48,7 +48,7 @@ export default function Home() {
             <a href="#contact" className="hover:text-primary transition-colors">Contacto</a>
           </nav>
           <div className="flex items-center gap-4">
-            <Button variant="secondary" className="hidden sm:flex rounded-full gap-2 border-secondary" asChild>
+            <Button variant="secondary" className="hidden sm:flex rounded-full gap-2 shadow-sm" asChild>
               <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4" />
                 Pedido WhatsApp
@@ -187,7 +187,7 @@ export default function Home() {
                       <p className="text-primary font-bold text-lg">{dessert.price}</p>
                     </CardContent>
                     <CardFooter className="p-4 pt-0">
-                      <Button variant="outline" className="w-full rounded-full border-primary/20 hover:bg-primary/5 text-primary text-xs" asChild>
+                      <Button variant="secondary" className="w-full rounded-full shadow-sm text-xs" asChild>
                         <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20me%20interesa%20el%20postre%20${encodeURIComponent(imageData?.description || '')}`} target="_blank" rel="noopener noreferrer">
                           Consultar
                         </a>
