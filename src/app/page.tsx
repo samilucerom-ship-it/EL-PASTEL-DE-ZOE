@@ -11,23 +11,23 @@ const WHATSAPP_NUMBER = "928175368";
 const SOCIAL_HANDLE = "EL_PASTEL_DE_ZOE";
 
 const mainCakes = [
-  { id: 'pastel-1', price: '$45', rating: 4.9, reviews: 124 },
-  { id: 'pastel-2', price: '$48', rating: 5.0, reviews: 89 },
-  { id: 'pastel-3', price: '$42', rating: 4.8, reviews: 156 },
-  { id: 'pastel-4', price: '$38', rating: 4.7, reviews: 92 },
-  { id: 'pastel-5', price: '$40', rating: 4.9, reviews: 105 },
-  { id: 'pastel-6', price: '$44', rating: 4.8, reviews: 78 },
-  { id: 'pastel-7', price: '$52', rating: 5.0, reviews: 65 },
-  { id: 'pastel-8', price: '$46', rating: 4.9, reviews: 112 },
-  { id: 'pastel-9', price: '$50', rating: 4.7, reviews: 88 },
-  { id: 'pastel-10', price: '$35', rating: 5.0, reviews: 95 },
+  { id: 'pastel-1', rating: 4.9, reviews: 124 },
+  { id: 'pastel-2', rating: 5.0, reviews: 89 },
+  { id: 'pastel-3', rating: 4.8, reviews: 156 },
+  { id: 'pastel-4', rating: 4.7, reviews: 92 },
+  { id: 'pastel-5', rating: 4.9, reviews: 105 },
+  { id: 'pastel-6', rating: 4.8, reviews: 78 },
+  { id: 'pastel-7', rating: 5.0, reviews: 65 },
+  { id: 'pastel-8', rating: 4.9, reviews: 112 },
+  { id: 'pastel-9', rating: 4.7, reviews: 88 },
+  { id: 'pastel-10', rating: 5.0, reviews: 95 },
 ];
 
 const seasonalDesserts = [
-  { id: 'postre-1', price: '$15', rating: 4.9, reviews: 45 },
-  { id: 'postre-2', price: '$12', rating: 4.8, reviews: 32 },
-  { id: 'postre-3', price: '$18', rating: 4.7, reviews: 56 },
-  { id: 'postre-4', price: '$10', rating: 4.9, reviews: 28 },
+  { id: 'postre-1', rating: 4.9, reviews: 45 },
+  { id: 'postre-2', rating: 4.8, reviews: 32 },
+  { id: 'postre-3', rating: 4.7, reviews: 56 },
+  { id: 'postre-4', rating: 4.9, reviews: 28 },
 ];
 
 export default function Home() {
@@ -134,7 +134,6 @@ export default function Home() {
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <CardTitle className="text-2xl font-headline">{imageData?.description}</CardTitle>
-                        <span className="text-xl font-bold text-primary">{cake.price}</span>
                       </div>
                       <p className="text-muted-foreground mb-4 line-clamp-2">
                         Exquisita combinación de sabores diseñada para deleitar tu paladar. Una de nuestras opciones más queridas.
@@ -184,7 +183,6 @@ export default function Home() {
                     </CardHeader>
                     <CardContent className="p-6 text-center">
                       <CardTitle className="text-xl font-headline mb-2">{imageData?.description}</CardTitle>
-                      <p className="text-primary font-bold text-lg">{dessert.price}</p>
                     </CardContent>
                     <CardFooter className="p-4 pt-0">
                       <Button variant="secondary" className="w-full rounded-full shadow-sm text-xs" asChild>
