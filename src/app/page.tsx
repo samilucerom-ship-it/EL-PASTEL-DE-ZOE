@@ -10,13 +10,17 @@ import { RecommendationTool } from '@/components/RecommendationTool';
 const WHATSAPP_NUMBER = "928175368";
 const SOCIAL_HANDLE = "EL_PASTEL_DE_ZOE";
 
-const cakes = [
+const mainCakes = [
   { id: 'pastel-1', price: '$45', rating: 4.9, reviews: 124 },
   { id: 'pastel-2', price: '$48', rating: 5.0, reviews: 89 },
   { id: 'pastel-3', price: '$42', rating: 4.8, reviews: 156 },
+  { id: 'pastel-4', price: '$38', rating: 4.7, reviews: 92 },
+  { id: 'pastel-5', price: '$40', rating: 4.9, reviews: 105 },
+  { id: 'pastel-6', price: '$44', rating: 4.8, reviews: 78 },
 ];
 
 const seasonalDesserts = [
+  { id: 'pastel-7', price: '$52', rating: 5.0, reviews: 65 },
   { id: 'pastel-8', price: '$46', rating: 4.9, reviews: 112 },
   { id: 'pastel-9', price: '$50', rating: 4.7, reviews: 88 },
   { id: 'pastel-10', price: '$35', rating: 5.0, reviews: 95 },
@@ -105,7 +109,7 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {cakes.map((cake) => {
+              {mainCakes.map((cake) => {
                 const imageData = PlaceHolderImages.find(img => img.id === cake.id);
                 return (
                   <Card key={cake.id} className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white">
@@ -135,7 +139,7 @@ export default function Home() {
                         Exquisita combinación de sabores diseñada para deleitar tu paladar. Una de nuestras opciones más queridas.
                       </p>
                       <div className="text-xs text-muted-foreground flex items-center gap-1">
-                        <span>{cake.reviews} valoraciones de clientes satisfechos</span>
+                        <span>{cake.reviews} valoraciones</span>
                       </div>
                     </CardContent>
                     <CardFooter className="p-6 pt-0">
@@ -164,12 +168,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {seasonalDesserts.map((item) => {
                 const imageData = PlaceHolderImages.find(img => img.id === item.id);
                 return (
                   <Card key={item.id} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300 bg-background">
-                    <CardHeader className="p-0 relative h-72 overflow-hidden">
+                    <CardHeader className="p-0 relative h-64 overflow-hidden">
                       {imageData && (
                         <Image 
                           src={imageData.imageUrl} 
@@ -180,26 +184,16 @@ export default function Home() {
                         />
                       )}
                       <div className="absolute top-4 left-4">
-                        <Badge className="bg-secondary text-secondary-foreground">Edición Limitada</Badge>
-                      </div>
-                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm">
-                        <div className="flex items-center gap-1 text-yellow-500 text-sm font-bold">
-                          <Star className="w-4 h-4 fill-current" />
-                          {item.rating}
-                        </div>
+                        <Badge className="bg-secondary text-secondary-foreground">Especial</Badge>
                       </div>
                     </CardHeader>
                     <CardContent className="p-6 text-center">
-                      <CardTitle className="text-2xl font-headline mb-2">{imageData?.description}</CardTitle>
-                      <p className="text-primary font-bold text-2xl mb-4">{item.price}</p>
-                      <p className="text-muted-foreground mb-4">
-                        Una experiencia sensorial única que solo estará disponible por tiempo limitado.
-                      </p>
+                      <CardTitle className="text-xl font-headline mb-2">{imageData?.description}</CardTitle>
+                      <p className="text-primary font-bold text-xl mb-4">{item.price}</p>
                     </CardContent>
-                    <CardFooter className="p-6 pt-0">
-                      <Button className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm gap-2" asChild>
+                    <CardFooter className="p-4 pt-0">
+                      <Button variant="outline" className="w-full rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-colors gap-2" asChild>
                         <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20me%20interesa%20probar%20el%20${encodeURIComponent(imageData?.description || '')}`} target="_blank" rel="noopener noreferrer">
-                          <MessageCircle className="w-4 h-4" />
                           Pedir Ahora
                         </a>
                       </Button>
