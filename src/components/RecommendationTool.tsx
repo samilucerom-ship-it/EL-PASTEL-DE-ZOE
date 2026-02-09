@@ -118,12 +118,12 @@ export function RecommendationTool() {
         {recommendation ? (
           <Card className="border-2 border-secondary/30 shadow-2xl bg-white overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-700">
             {recommendedImage && (
-              <div className="relative h-64 w-full">
+              <div className="relative h-64 w-full bg-muted/10">
                 <Image 
                   src={recommendedImage.imageUrl} 
                   alt={recommendedImage.description}
                   fill
-                  className="object-cover"
+                  className="object-contain p-4"
                 />
               </div>
             )}

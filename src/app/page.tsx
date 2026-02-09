@@ -23,8 +23,6 @@ const mainCakes = [
   { id: 'pastel-10', price: '$35', rating: 5.0, reviews: 95 },
 ];
 
-const seasonalDesserts: any[] = [];
-
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -54,16 +52,16 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative h-[80vh] flex items-center overflow-hidden bg-black">
+        <section className="relative h-[60vh] md:h-[80vh] flex items-center overflow-hidden bg-black">
           <Image 
             src="/assets/Banner.png" 
             alt="Banner El Pastel de Zoe" 
             fill 
-            className="object-cover opacity-80 z-0"
+            className="object-contain opacity-90 z-0"
             priority
           />
           {/* Dark Overlay Layer for Contrast */}
-          <div className="absolute inset-0 bg-black/50 z-[1]" />
+          <div className="absolute inset-0 bg-black/40 z-[1]" />
           
           <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center text-white">
             <div className="space-y-6 max-w-3xl">
@@ -111,13 +109,13 @@ export default function Home() {
                 const imageData = PlaceHolderImages.find(img => img.id === cake.id);
                 return (
                   <Card key={cake.id} className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white">
-                    <CardHeader className="p-0 relative h-72 overflow-hidden">
+                    <CardHeader className="p-0 relative h-72 overflow-hidden bg-muted/10">
                       {imageData && (
                         <Image 
                           src={imageData.imageUrl} 
                           alt={imageData.description} 
                           fill 
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                           data-ai-hint={imageData.imageHint || 'cake'}
                         />
                       )}
