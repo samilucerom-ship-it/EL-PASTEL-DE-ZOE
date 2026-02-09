@@ -57,7 +57,7 @@ export default function Home() {
             src="/assets/Banner.png" 
             alt="Banner El Pastel de Zoe" 
             fill 
-            className="object-contain opacity-90 z-0"
+            className="object-cover opacity-90 z-0"
             priority
           />
           {/* Dark Overlay Layer for Contrast */}
@@ -115,7 +115,7 @@ export default function Home() {
                           src={imageData.imageUrl} 
                           alt={imageData.description} 
                           fill 
-                          className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
                           data-ai-hint={imageData.imageHint || 'cake'}
                         />
                       )}
