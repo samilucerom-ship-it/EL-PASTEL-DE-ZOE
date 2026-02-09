@@ -4,61 +4,61 @@
     {
       "id": "pastel-1",
       "description": "Chocolate Fudge Premium",
-      "imageUrl": "/assets/PASATELES/PASTEL_1.jpeg",
+      "imageUrl": "/assets/PASTEL_1.jpeg",
       "imageHint": "chocolate cake"
     },
     {
       "id": "pastel-2",
       "description": "Red Velvet Dream",
-      "imageUrl": "/assets/PASATELES/PASTEL_2.jpeg",
+      "imageUrl": "/assets/PASTEL_2.jpeg",
       "imageHint": "red velvet cake"
     },
     {
       "id": "pastel-3",
       "description": "Strawberry Shortcake",
-      "imageUrl": "/assets/PASATELES/PASTEL_3.jpeg",
+      "imageUrl": "/assets/PASTEL_3.jpeg",
       "imageHint": "strawberry cake"
     },
     {
       "id": "pastel-4",
       "description": "Vanilla Bean Classic",
-      "imageUrl": "/assets/PASATELES/PASTEL_4.jpeg",
+      "imageUrl": "/assets/PASTEL_4.jpeg",
       "imageHint": "vanilla cake"
     },
     {
       "id": "pastel-5",
       "description": "Lemon Zest Delight",
-      "imageUrl": "/assets/PASATELES/PASTEL_5.jpeg",
+      "imageUrl": "/assets/PASTEL_5.jpeg",
       "imageHint": "lemon cake"
     },
     {
       "id": "pastel-6",
       "description": "Carrot Cake Supreme",
-      "imageUrl": "/assets/PASATELES/PASTEL_6.jpeg",
+      "imageUrl": "/assets/PASTEL_6.jpeg",
       "imageHint": "carrot cake"
     },
     {
       "id": "pastel-7",
       "description": "Tiramisu Especial",
-      "imageUrl": "/assets/PASATELES/PASTEL_7.jpeg",
+      "imageUrl": "/assets/PASTEL_7.jpeg",
       "imageHint": "tiramisu"
     },
     {
       "id": "pastel-8",
       "description": "Tres Leches Gourmet",
-      "imageUrl": "/assets/PASATELES/PASTEL_8.jpeg",
+      "imageUrl": "/assets/PASTEL_8.jpeg",
       "imageHint": "tres leches"
     },
     {
       "id": "pastel-9",
       "description": "Cheesecake de la Casa",
-      "imageUrl": "/assets/PASATELES/PASTEL_9.jpeg",
+      "imageUrl": "/assets/PASTEL_9.jpeg",
       "imageHint": "cheesecake"
     },
     {
       "id": "pastel-10",
       "description": "Tentación de Chocolate",
-      "imageUrl": "/assets/PASATELES/PASTEL_10.jpeg",
+      "imageUrl": "/assets/PASTEL_10.jpeg",
       "imageHint": "chocolate dessert"
     }
   ]

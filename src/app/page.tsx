@@ -10,7 +10,6 @@ import { RecommendationTool } from '@/components/RecommendationTool';
 const WHATSAPP_NUMBER = "928175368";
 const SOCIAL_HANDLE = "EL_PASTEL_DE_ZOE";
 
-// Mapping the requested winner products for the main section
 const cakes = [
   { id: 'pastel-1', price: '$45', rating: 4.9, reviews: 124 },
   { id: 'pastel-2', price: '$48', rating: 5.0, reviews: 89 },
@@ -111,13 +110,15 @@ export default function Home() {
                 return (
                   <Card key={cake.id} className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white">
                     <CardHeader className="p-0 relative h-72 overflow-hidden">
-                      <Image 
-                        src={imageData?.imageUrl || ''} 
-                        alt={imageData?.description || ''} 
-                        fill 
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        data-ai-hint={imageData?.imageHint || 'cake'}
-                      />
+                      {imageData && (
+                        <Image 
+                          src={imageData.imageUrl} 
+                          alt={imageData.description} 
+                          fill 
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          data-ai-hint={imageData.imageHint || 'cake'}
+                        />
+                      )}
                       <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm">
                         <div className="flex items-center gap-1 text-yellow-500 text-sm font-bold">
                           <Star className="w-4 h-4 fill-current" />
@@ -169,13 +170,15 @@ export default function Home() {
                 return (
                   <Card key={item.id} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300 bg-background">
                     <CardHeader className="p-0 relative h-72 overflow-hidden">
-                      <Image 
-                        src={imageData?.imageUrl || ''} 
-                        alt={imageData?.description || ''} 
-                        fill 
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        data-ai-hint={imageData?.imageHint || 'dessert'}
-                      />
+                      {imageData && (
+                        <Image 
+                          src={imageData.imageUrl} 
+                          alt={imageData.description} 
+                          fill 
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          data-ai-hint={imageData.imageHint || 'dessert'}
+                        />
+                      )}
                       <div className="absolute top-4 left-4">
                         <Badge className="bg-secondary text-secondary-foreground">Edición Limitada</Badge>
                       </div>
