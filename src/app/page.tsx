@@ -23,6 +23,13 @@ const mainCakes = [
   { id: 'pastel-10', price: '$35', rating: 5.0, reviews: 95 },
 ];
 
+const seasonalDesserts = [
+  { id: 'postre-11', price: '$15', rating: 4.9, reviews: 45 },
+  { id: 'postre-12', price: '$12', rating: 4.8, reviews: 32 },
+  { id: 'postre-13', price: '$18', rating: 4.7, reviews: 56 },
+  { id: 'postre-14', price: '$10', rating: 4.9, reviews: 28 },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -35,7 +42,8 @@ export default function Home() {
             </h1>
           </div>
           <nav className="hidden md:flex items-center gap-8 font-headline text-lg">
-            <a href="#products" className="hover:text-primary transition-colors">Postres</a>
+            <a href="#products" className="hover:text-primary transition-colors">Pasteles</a>
+            <a href="#more-desserts" className="hover:text-primary transition-colors">Postres</a>
             <a href="#recommendations" className="hover:text-primary transition-colors">Recomendaciones</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contacto</a>
           </nav>
@@ -60,7 +68,6 @@ export default function Home() {
             className="object-cover opacity-90 z-0"
             priority
           />
-          {/* Dark Overlay Layer for Contrast */}
           <div className="absolute inset-0 bg-black/40 z-[1]" />
           
           <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center text-white">
@@ -163,6 +170,50 @@ export default function Home() {
               </p>
             </div>
             <RecommendationTool />
+          </div>
+        </section>
+
+        {/* Additional Desserts Section */}
+        <section id="more-desserts" className="py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16 space-y-4">
+              <h3 className="text-4xl font-headline">Postres Individuales & Dulces</h3>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Pequeños bocados de felicidad ideales para cualquier momento del día.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {seasonalDesserts.map((dessert) => {
+                const imageData = PlaceHolderImages.find(img => img.id === dessert.id);
+                return (
+                  <Card key={dessert.id} className="group overflow-hidden border-none shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
+                    <CardHeader className="p-0 relative h-64 overflow-hidden bg-muted/5">
+                      {imageData && (
+                        <Image 
+                          src={imageData.imageUrl} 
+                          alt={imageData.description} 
+                          fill 
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          data-ai-hint={imageData.imageHint || 'dessert'}
+                        />
+                      )}
+                    </CardHeader>
+                    <CardContent className="p-6 text-center">
+                      <CardTitle className="text-xl font-headline mb-2">{imageData?.description}</CardTitle>
+                      <p className="text-primary font-bold text-lg">{dessert.price}</p>
+                    </CardContent>
+                    <CardFooter className="p-4 pt-0">
+                      <Button variant="outline" className="w-full rounded-full border-primary/20 hover:bg-primary/5 text-primary text-xs" asChild>
+                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20me%20interesa%20el%20postre%20${encodeURIComponent(imageData?.description || '')}`} target="_blank" rel="noopener noreferrer">
+                          Consultar
+                        </a>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </section>
       </main>

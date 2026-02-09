@@ -60,6 +60,30 @@
       "description": "Tentación de Chocolate",
       "imageUrl": "/assets/PASTEL_10.jpeg",
       "imageHint": "chocolate dessert"
+    },
+    {
+      "id": "postre-11",
+      "description": "Macarons Artesanales",
+      "imageUrl": "https://picsum.photos/seed/11/600/400",
+      "imageHint": "macarons"
+    },
+    {
+      "id": "postre-12",
+      "description": "Mini Cheesecakes",
+      "imageUrl": "https://picsum.photos/seed/12/600/400",
+      "imageHint": "mini cheesecake"
+    },
+    {
+      "id": "postre-13",
+      "description": "Cupcakes Gourmet",
+      "imageUrl": "https://picsum.photos/seed/13/600/400",
+      "imageHint": "cupcakes"
+    },
+    {
+      "id": "postre-14",
+      "description": "Brownies de Nuez",
+      "imageUrl": "https://picsum.photos/seed/14/600/400",
+      "imageHint": "brownies"
     }
   ]
 }
