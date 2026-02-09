@@ -17,14 +17,13 @@ const mainCakes = [
   { id: 'pastel-4', price: '$38', rating: 4.7, reviews: 92 },
   { id: 'pastel-5', price: '$40', rating: 4.9, reviews: 105 },
   { id: 'pastel-6', price: '$44', rating: 4.8, reviews: 78 },
-];
-
-const seasonalDesserts = [
   { id: 'pastel-7', price: '$52', rating: 5.0, reviews: 65 },
   { id: 'pastel-8', price: '$46', rating: 4.9, reviews: 112 },
   { id: 'pastel-9', price: '$50', rating: 4.7, reviews: 88 },
   { id: 'pastel-10', price: '$35', rating: 5.0, reviews: 95 },
 ];
+
+const seasonalDesserts: any[] = [];
 
 export default function Home() {
   return (
@@ -39,7 +38,6 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex items-center gap-8 font-headline text-lg">
             <a href="#products" className="hover:text-primary transition-colors">Postres</a>
-            <a href="#seasonal" className="hover:text-primary transition-colors">Temporada</a>
             <a href="#recommendations" className="hover:text-primary transition-colors">Recomendaciones</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contacto</a>
           </nav>
@@ -147,54 +145,6 @@ export default function Home() {
                         <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20me%20interesa%20el%20pastel%20${encodeURIComponent(imageData?.description || '')}`} target="_blank" rel="noopener noreferrer">
                           <MessageCircle className="w-4 h-4" />
                           Consultar por WhatsApp
-                        </a>
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Seasonal Section */}
-        <section id="seasonal" className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16 space-y-4">
-              <Badge className="bg-primary text-primary-foreground mb-4">Lo más nuevo</Badge>
-              <h3 className="text-4xl font-headline">Favoritos de la Temporada</h3>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Prueba nuestras especialidades limitadas, creadas para capturar la esencia de esta estación.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {seasonalDesserts.map((item) => {
-                const imageData = PlaceHolderImages.find(img => img.id === item.id);
-                return (
-                  <Card key={item.id} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300 bg-background">
-                    <CardHeader className="p-0 relative h-64 overflow-hidden">
-                      {imageData && (
-                        <Image 
-                          src={imageData.imageUrl} 
-                          alt={imageData.description} 
-                          fill 
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
-                          data-ai-hint={imageData.imageHint || 'dessert'}
-                        />
-                      )}
-                      <div className="absolute top-4 left-4">
-                        <Badge className="bg-secondary text-secondary-foreground">Especial</Badge>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="p-6 text-center">
-                      <CardTitle className="text-xl font-headline mb-2">{imageData?.description}</CardTitle>
-                      <p className="text-primary font-bold text-xl mb-4">{item.price}</p>
-                    </CardContent>
-                    <CardFooter className="p-4 pt-0">
-                      <Button variant="outline" className="w-full rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-colors gap-2" asChild>
-                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20me%20interesa%20probar%20el%20${encodeURIComponent(imageData?.description || '')}`} target="_blank" rel="noopener noreferrer">
-                          Pedir Ahora
                         </a>
                       </Button>
                     </CardFooter>
