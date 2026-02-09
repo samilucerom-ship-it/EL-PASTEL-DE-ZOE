@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -9,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { cakeRecommendation, type CakeRecommendationOutput } from '@/ai/flows/cake-recommendation';
 import { Sparkles, Loader2, Cake, Heart, Utensils } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function RecommendationTool() {
   const [loading, setLoading] = useState(false);
@@ -32,6 +34,10 @@ export function RecommendationTool() {
       setLoading(false);
     }
   };
+
+  const recommendedImage = recommendation 
+    ? PlaceHolderImages.find(img => img.description === recommendation.recommendation)
+    : null;
 
   return (
     <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -111,6 +117,16 @@ export function RecommendationTool() {
       <div className="h-full flex flex-col justify-center">
         {recommendation ? (
           <Card className="border-2 border-secondary/30 shadow-2xl bg-white overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-700">
+            {recommendedImage && (
+              <div className="relative h-64 w-full">
+                <Image 
+                  src={recommendedImage.imageUrl} 
+                  alt={recommendedImage.description}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
             <div className="bg-secondary/10 py-4 px-6 border-b border-secondary/20">
               <Badge className="bg-secondary text-secondary-foreground font-bold">¡Nuestra Sugerencia!</Badge>
             </div>
