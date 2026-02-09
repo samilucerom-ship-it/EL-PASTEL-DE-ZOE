@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
@@ -6,6 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Instagram, Facebook, Smartphone, Star } from 'lucide-react';
 import { RecommendationTool } from '@/components/RecommendationTool';
+import { ImageModal } from '@/components/ImageModal';
 
 const WHATSAPP_NUMBER = "928175368";
 const SOCIAL_HANDLE = "EL_PASTEL_DE_ZOE";
@@ -118,15 +118,13 @@ export default function Home() {
                   <Card key={cake.id} className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white">
                     <CardHeader className="p-0 relative h-[500px] overflow-hidden bg-muted/10">
                       {imageData && (
-                        <Image 
+                        <ImageModal 
                           src={imageData.imageUrl} 
                           alt={imageData.description} 
-                          fill 
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          data-ai-hint={imageData.imageHint || 'cake'}
+                          imageHint={imageData.imageHint || 'cake'}
                         />
                       )}
-                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm">
+                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm z-10">
                         <div className="flex items-center gap-1 text-yellow-500 text-sm font-bold">
                           <Star className="w-4 h-4 fill-current" />
                           {cake.rating}
@@ -177,12 +175,10 @@ export default function Home() {
                   <Card key={dessert.id} className="group overflow-hidden border-none shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                     <CardHeader className="p-0 relative h-64 overflow-hidden bg-muted/5">
                       {imageData && (
-                        <Image 
+                        <ImageModal 
                           src={imageData.imageUrl} 
                           alt={imageData.description} 
-                          fill 
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
-                          data-ai-hint={imageData.imageHint || 'dessert'}
+                          imageHint={imageData.imageHint || 'dessert'}
                         />
                       )}
                     </CardHeader>
