@@ -54,6 +54,24 @@
       "description": "Cheesecake Raspberry Swirl",
       "imageUrl": "https://picsum.photos/seed/cake9/600/400",
       "imageHint": "raspberry cheesecake"
+    },
+    {
+      "id": "brownie-supreme",
+      "description": "Brownie Supremo",
+      "imageUrl": "https://picsum.photos/seed/brownie/600/400",
+      "imageHint": "chocolate brownie"
+    },
+    {
+      "id": "macarons",
+      "description": "Pack de Macarons",
+      "imageUrl": "https://picsum.photos/seed/macarons/600/400",
+      "imageHint": "macarons"
+    },
+    {
+      "id": "pavlova",
+      "description": "Pavlova de Frutas",
+      "imageUrl": "https://picsum.photos/seed/pavlova/600/400",
+      "imageHint": "pavlova dessert"
     }
   ]
 }

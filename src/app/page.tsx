@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
@@ -21,6 +22,12 @@ const cakes = [
   { id: 'cheesecake', price: '$50', rating: 4.7, reviews: 88 },
 ];
 
+const seasonalDesserts = [
+  { id: 'brownie-supreme', price: '$25', rating: 4.9, reviews: 56 },
+  { id: 'macarons', price: '$18', rating: 4.8, reviews: 42 },
+  { id: 'pavlova', price: '$35', rating: 5.0, reviews: 29 },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -34,6 +41,7 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex items-center gap-8 font-headline text-lg">
             <a href="#products" className="hover:text-primary transition-colors">Postres</a>
+            <a href="#seasonal" className="hover:text-primary transition-colors">Temporada</a>
             <a href="#recommendations" className="hover:text-primary transition-colors">Recomendaciones</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contacto</a>
           </nav>
@@ -88,7 +96,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Product Showcase */}
+        {/* Product Showcase - Main Section */}
         <section id="products" className="py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -142,6 +150,62 @@ export default function Home() {
                         <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20me%20interesa%20el%20pastel%20${encodeURIComponent(imageData?.description || '')}`} target="_blank" rel="noopener noreferrer">
                           <MessageCircle className="w-4 h-4" />
                           Consultar por WhatsApp
+                        </a>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Seasonal Section - New Section */}
+        <section id="seasonal" className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16 space-y-4">
+              <Badge className="bg-primary text-primary-foreground mb-4">Lo más nuevo</Badge>
+              <h3 className="text-4xl font-headline">Favoritos de la Temporada</h3>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Prueba nuestras especialidades limitadas, creadas para capturar la esencia de esta estación.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {seasonalDesserts.map((item) => {
+                const imageData = PlaceHolderImages.find(img => img.id === item.id);
+                return (
+                  <Card key={item.id} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300 bg-background">
+                    <CardHeader className="p-0 relative h-72 overflow-hidden">
+                      <Image 
+                        src={imageData?.imageUrl || ''} 
+                        alt={imageData?.description || ''} 
+                        fill 
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-ai-hint={imageData?.imageHint || 'dessert'}
+                      />
+                      <div className="absolute top-4 left-4">
+                        <Badge className="bg-secondary text-secondary-foreground">Edición Limitada</Badge>
+                      </div>
+                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-sm">
+                        <div className="flex items-center gap-1 text-yellow-500 text-sm font-bold">
+                          <Star className="w-4 h-4 fill-current" />
+                          {item.rating}
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-6 text-center">
+                      <CardTitle className="text-2xl font-headline mb-2">{imageData?.description}</CardTitle>
+                      <p className="text-primary font-bold text-2xl mb-4">{item.price}</p>
+                      <p className="text-muted-foreground mb-4">
+                        Una experiencia sensorial única que solo estará disponible por tiempo limitado.
+                      </p>
+                    </CardContent>
+                    <CardFooter className="p-6 pt-0">
+                      <Button className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm gap-2" asChild>
+                        <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20me%20interesa%20probar%20el%20${encodeURIComponent(imageData?.description || '')}`} target="_blank" rel="noopener noreferrer">
+                          <MessageCircle className="w-4 h-4" />
+                          Pedir Ahora
                         </a>
                       </Button>
                     </CardFooter>
