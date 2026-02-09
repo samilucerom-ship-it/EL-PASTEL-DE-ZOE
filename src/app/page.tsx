@@ -10,15 +10,11 @@ import { RecommendationTool } from '@/components/RecommendationTool';
 const WHATSAPP_NUMBER = "928175368";
 const SOCIAL_HANDLE = "EL_PASTEL_DE_ZOE";
 
-// Mapping the 10 winner products
+// Mapping the requested winner products for the main section
 const cakes = [
   { id: 'pastel-1', price: '$45', rating: 4.9, reviews: 124 },
   { id: 'pastel-2', price: '$48', rating: 5.0, reviews: 89 },
   { id: 'pastel-3', price: '$42', rating: 4.8, reviews: 156 },
-  { id: 'pastel-4', price: '$38', rating: 4.7, reviews: 92 },
-  { id: 'pastel-5', price: '$40', rating: 4.9, reviews: 74 },
-  { id: 'pastel-6', price: '$44', rating: 4.8, reviews: 63 },
-  { id: 'pastel-7', price: '$52', rating: 5.0, reviews: 45 },
 ];
 
 const seasonalDesserts = [
@@ -62,11 +58,11 @@ export default function Home() {
             src="/assets/Banner.png" 
             alt="Banner El Pastel de Zoe" 
             fill 
-            className="object-cover opacity-70 z-0"
+            className="object-cover opacity-80 z-0"
             priority
           />
           {/* Dark Overlay Layer for Contrast */}
-          <div className="absolute inset-0 bg-black/40 z-[1]" />
+          <div className="absolute inset-0 bg-black/50 z-[1]" />
           
           <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center text-white">
             <div className="space-y-6 max-w-3xl">
