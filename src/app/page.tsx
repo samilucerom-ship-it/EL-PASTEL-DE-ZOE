@@ -160,19 +160,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* AI Recommender Tool */}
-        <section id="recommendations" className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-4 mb-16">
-              <h3 className="text-4xl font-headline">¿No sabes cuál elegir?</h3>
-              <p className="text-muted-foreground text-lg">
-                Nuestra Inteligencia Artificial te ayudará a encontrar el pastel perfecto según tus gustos y ocasión.
-              </p>
-            </div>
-            <RecommendationTool />
-          </div>
-        </section>
-
         {/* Additional Desserts Section */}
         <section id="more-desserts" className="py-24 bg-background">
           <div className="container mx-auto px-4">
@@ -214,6 +201,19 @@ export default function Home() {
                 );
               })}
             </div>
+          </div>
+        </section>
+
+        {/* AI Recommender Tool - Penultimate Section */}
+        <section id="recommendations" className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-4 mb-16">
+              <h3 className="text-4xl font-headline">¿No sabes cuál elegir?</h3>
+              <p className="text-muted-foreground text-lg">
+                Nuestra Inteligencia Artificial te ayudará a encontrar el pastel perfecto según tus gustos y ocasión.
+              </p>
+            </div>
+            <RecommendationTool />
           </div>
         </section>
       </main>
