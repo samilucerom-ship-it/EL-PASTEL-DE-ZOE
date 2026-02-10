@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Instagram, Facebook, Smartphone, Star } from 'lucide-react';
-import { RecommendationTool } from '@/components/RecommendationTool';
 import { ImageModal } from '@/components/ImageModal';
 
 const WHATSAPP_NUMBER = "928175368";
@@ -44,7 +43,6 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-8 font-headline text-lg">
             <a href="#products" className="hover:text-primary transition-colors">Pasteles</a>
             <a href="#more-desserts" className="hover:text-primary transition-colors">Postres</a>
-            <a href="#recommendations" className="hover:text-primary transition-colors">Recomendaciones</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contacto</a>
           </nav>
           <div className="flex items-center gap-4">
@@ -85,9 +83,6 @@ export default function Home() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg text-lg" asChild>
                   <a href="#products">Ver Catálogo</a>
-                </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-8 border-white text-white hover:bg-white/10 text-lg bg-transparent" asChild>
-                  <a href="#recommendations">Encuentra tu Pastel</a>
                 </Button>
               </div>
             </div>
@@ -195,19 +190,6 @@ export default function Home() {
                 );
               })}
             </div>
-          </div>
-        </section>
-
-        {/* AI Recommender Tool - Penultimate Section */}
-        <section id="recommendations" className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-4 mb-16">
-              <h3 className="text-4xl font-headline">¿No sabes cuál elegir?</h3>
-              <p className="text-muted-foreground text-lg">
-                Nuestra Inteligencia Artificial te ayudará a encontrar el pastel perfecto según tus gustos y ocasión.
-              </p>
-            </div>
-            <RecommendationTool />
           </div>
         </section>
       </main>
