@@ -66,7 +66,7 @@ export default function Home() {
             className="object-cover opacity-80 scale-105 animate-pulse duration-[10000ms]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-background z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-background z-[1]" />
           
           <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center text-white">
             <div className="space-y-8 max-w-4xl">
@@ -80,7 +80,7 @@ export default function Home() {
                   <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary/30 blur-sm"></span>
                 </span>
               </h2>
-              <p className="text-xl md:text-2xl text-white/90 font-light max-w-2xl mx-auto glass-card rounded-2xl p-6 luxury-shadow animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+              <p className="text-xl md:text-2xl text-white font-semibold max-w-2xl mx-auto bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 luxury-shadow animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 shadow-2xl">
                 Transformamos ingredientes premium en momentos inolvidables para tu paladar.
               </p>
               <div className="flex flex-wrap justify-center gap-6 animate-in fade-in zoom-in duration-1000 delay-500">
