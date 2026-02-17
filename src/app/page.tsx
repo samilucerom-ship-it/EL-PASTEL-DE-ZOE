@@ -134,12 +134,12 @@ export default function Home() {
                         {cake.rating}
                       </div>
                     </CardHeader>
-                    <CardContent className="p-4 md:p-8 space-y-2 md:space-y-4">
+                    <CardContent className="p-4 md:p-8 space-y-2 md:space-y-4 text-center">
                       <CardTitle className="text-lg md:text-3xl font-headline tracking-wide group-hover:text-primary transition-colors duration-300 line-clamp-1 md:line-clamp-none">{imageData?.description}</CardTitle>
                       <p className="hidden md:block text-muted-foreground leading-relaxed italic line-clamp-2">
                         Una experiencia sensorial única que combina texturas delicadas con sabores intensos y equilibrados.
                       </p>
-                      <div className="flex items-center gap-2 text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest pt-1 md:pt-2">
+                      <div className="flex items-center justify-center gap-2 text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest pt-1 md:pt-2">
                         <span className="hidden md:inline-block w-8 h-px bg-border"></span>
                         {cake.reviews} valoraciones
                       </div>
@@ -279,6 +279,20 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Floating Pink WhatsApp Button */}
+      <a
+        href={`https://wa.me/${WHATSAPP_NUMBER}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-[100] bg-primary text-white p-4 rounded-full shadow-2xl luxury-shadow hover:scale-110 active:scale-95 transition-all duration-300 group"
+        aria-label="Chatear por WhatsApp"
+      >
+        <MessageCircle className="w-8 h-8 md:w-10 md:h-10 fill-current" />
+        <span className="absolute right-full mr-4 bg-white text-primary px-4 py-2 rounded-xl text-sm font-bold shadow-xl opacity-0 translate-x-4 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap hidden md:block border border-primary/10">
+          ¿En qué puedo ayudarte? ✨
+        </span>
+      </a>
     </div>
   );
 }
