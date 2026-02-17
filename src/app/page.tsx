@@ -235,7 +235,12 @@ export default function Home() {
             <div className="space-y-8">
               <h4 className="text-2xl font-headline font-bold border-b pb-4">Contáctanos</h4>
               <div className="space-y-6">
-                <div className="flex items-center gap-4 group cursor-pointer">
+                <a 
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-4 group cursor-pointer transition-transform hover:translate-x-1"
+                >
                   <div className="bg-primary/10 p-4 rounded-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <Smartphone className="w-6 h-6 text-primary group-hover:text-white" />
                   </div>
@@ -243,7 +248,7 @@ export default function Home() {
                     <p className="text-xs text-muted-foreground uppercase font-bold tracking-widest">WhatsApp</p>
                     <span className="text-2xl font-headline">{WHATSAPP_NUMBER}</span>
                   </div>
-                </div>
+                </a>
                 <p className="text-muted-foreground text-lg leading-relaxed font-light">
                   Haz tu pedido con anticipación para asegurar la disponibilidad. Endulzamos tus eventos más especiales.
                 </p>
