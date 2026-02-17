@@ -46,7 +46,7 @@ export default function Home() {
             <a href="#contact" className="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full transition-colors">Contacto</a>
           </nav>
           <div className="flex items-center gap-4">
-            <Button variant="secondary" className="hidden sm:flex rounded-full gap-2 luxury-shadow hover:scale-105 active:scale-95 transition-all duration-300 bg-secondary" asChild>
+            <Button variant="secondary" className="hidden sm:flex rounded-full gap-2 luxury-shadow hover:scale-105 active:scale-95 transition-all duration-300 bg-secondary shadow-sm" asChild>
               <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4" />
                 Pedido WhatsApp
@@ -251,16 +251,16 @@ export default function Home() {
             </div>
 
             <div className="space-y-8">
-              <h4 className="text-2xl font-headline font-bold border-b pb-4">Club Zoe</h4>
-              <p className="text-muted-foreground font-light text-lg">Únete a nuestra lista exclusiva para recibir lanzamientos de temporada y promociones especiales.</p>
-              <div className="flex gap-2 bg-muted p-2 rounded-full focus-within:ring-2 focus-within:ring-primary/30 transition-all">
-                <input 
-                  type="email" 
-                  placeholder="Email exclusivo" 
-                  className="bg-transparent border-none rounded-full px-6 py-3 flex-grow focus:outline-none text-sm font-light"
-                />
-                <Button className="rounded-full bg-primary text-primary-foreground px-8 hover:scale-105 transition-transform">ÚNETE</Button>
-              </div>
+              <h4 className="text-2xl font-headline font-bold border-b pb-4">Pedidos Especiales</h4>
+              <p className="text-muted-foreground font-light text-lg">
+                ¿Tienes un evento único en mente? Escríbenos directamente para una cotización personalizada y asesoría inmediata.
+              </p>
+              <Button className="w-full rounded-full bg-primary text-primary-foreground px-8 py-7 text-lg hover:scale-105 transition-all duration-300 luxury-shadow group" asChild>
+                <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20quisiera%20más%20información%20sobre%20un%20pedido%20especial.`} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-6 w-6 group-hover:scale-110 transition-transform" />
+                  CONSULTAR WHATSAPP
+                </a>
+              </Button>
             </div>
           </div>
           
