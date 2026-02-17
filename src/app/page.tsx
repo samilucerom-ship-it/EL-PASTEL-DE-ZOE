@@ -279,20 +279,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      {/* Floating Pink WhatsApp Button */}
-      <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-[100] bg-primary text-white p-4 rounded-full shadow-2xl luxury-shadow hover:scale-110 active:scale-95 transition-all duration-300 group"
-        aria-label="Chatear por WhatsApp"
-      >
-        <MessageCircle className="w-8 h-8 md:w-10 md:h-10 fill-current" />
-        <span className="absolute right-full mr-4 bg-white text-primary px-4 py-2 rounded-xl text-sm font-bold shadow-xl opacity-0 translate-x-4 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap hidden md:block border border-primary/10">
-          ¿En qué puedo ayudarte? ✨
-        </span>
-      </a>
     </div>
   );
 }
